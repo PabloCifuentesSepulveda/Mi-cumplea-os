@@ -1,0 +1,219 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  overflow: hidden; /* Evita barras de desplazamiento */
+  min-height: 100vh;
+
+}
+
+.birthday-background {
+  /* Degradado festivo */
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 50%, #ffd1ff 100%);
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.birthday-text h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  animation: popIn 1s ease-in-out;
+  font-weight: bold;
+}
+.parrafo-text h2 {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: popIn 1s ease-in-out;
+}
+/* Configuración y animación del confeti */
+.confetti {
+  position: absolute;
+  width: 15px;
+ min-height: 15px;
+  background-color: #ffe600;
+  border-radius: 50%;
+  animation: fall 4s linear infinite;
+}
+----------------------------------------
+
+
+/* Hace que las imágenes y videos internos no se desborden */
+.contenedor-adaptable img, 
+.contenedor-adaptable video {
+    max-width: 100%;
+   min-height:auto;
+}
+
+
+-------------------------------------
+
+.contenedor-imou {
+    position: fixed;
+    width: 1%; /* O el tamaño que ocupe tu diseño */
+    min-height: 100vh; /* Altura total de la ventana */
+}
+.contenedor-imou img {
+    position: relative;
+    margin-top: 20;
+    right: 0;
+    width: 150px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 15px;  
+}
+.contenedor-imou:hover img {
+  transform: scale(1.2) translateY(-10px); /* Aumenta tamaño un 20% y sube 10px */
+}
+
+.contenedor-imagen {
+    position: relative;
+    width: 1%; /* O el tamaño que ocupe tu diseño */
+    height: 100vh; /* Altura total de la ventana */
+}
+
+.contenedor-imagen img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 17px;  
+    z-index: 9999;
+    transform: translateZ(0);
+}
+
+
+
+.contenedor-imagen:hover img {
+  transform: scale(1.2) translateY(-10px); /* Aumenta tamaño un 20% y sube 10px */
+}
+.contenedor-imagen1 img {
+    position: fixed;
+    margin-top: 650px;
+    right: 0;
+    width: 70px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 17px;
+    transform: translateZ(0);
+}
+.contenedor-imagen1 {
+    position: relative;
+    width: 1%; /* O el tamaño que ocupe tu diseño */
+    height: 100vh; /* Altura total de la ventana */
+    right:0;
+  
+}
+.contenedor-imagen1:hover img {
+  transform: scale(1.2) translateY(-10px); /* Aumenta tamaño un 20% y sube 10px */
+}
+.contenedor-imagen2 img {
+    position: static;
+    margin-top: 650px;
+    left: 0;
+    width: 70px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 17px;
+}
+.contenedor-imagen2 {
+    position: absolute;
+    width: 1%; /* O el tamaño que ocupe tu diseño */
+    height: 100vh; /* Altura total de la ventana */
+    left:0;
+  
+}
+.contenedor-imagen2:hover img {
+  transform: scale(1.2) translateY(-10px); /* Aumenta tamaño un 20% y sube 10px */
+}
+
+.contenedor-imagen3 img {
+    position: relative;
+    margin-top: 0px;
+    left: 0;
+    padding:0;
+    width: 70px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 17px;
+    
+}
+.contenedor-imagen3 {
+    position: absolute;
+    width: 1%; /* O el tamaño que ocupe tu diseño */
+    height: 100vh; /* Altura total de la ventana */
+    left:0;
+  
+}
+.contenedor-imagen3:hover img {
+  transform: scale(1.2) translateY(-10px); /* Aumenta tamaño un 20% y sube 10px */
+}
+------------------------------------
+.contenedor-adaptable {
+    width: 100%;             /* Se expande en móviles */
+    max-width: 1200px;       /* Evita que se deforme en pantallas gigantes */
+    margin: 0 auto;          /* Lo centra en la pantalla */
+    box-sizing: border-box;  /* Evita que el padding rompa el diseño */
+    padding: 15px;           /* Margen interno de seguridad para móviles */
+}
+
+
+
+
+
+
+/* Posiciones y colores aleatorios para el confeti */
+.confetti:nth-child(1) { left: 10%; background-color: #ff5722; animation-delay: 0s; animation-duration: 3.5s; }
+.confetti:nth-child(2) { left: 25%; background-color: #4caf50; animation-delay: 1.2s; }
+.confetti:nth-child(3) { left: 40%; background-color: #2196f3; animation-delay: 0.5s; animation-duration: 4.5s; }
+.confetti:nth-child(4) { left: 55%; background-color: #e91e63; animation-delay: 2s; }
+.confetti:nth-child(5) { left: 70%; background-color: #ffeb3b; animation-delay: 0.8s; animation-duration: 3.8s; }
+.confetti:nth-child(6) { left: 85%; background-color: #9c27b0; animation-delay: 1.5s; }
+.confetti:nth-child(7) { left: 15%; background-color: #00bcd4; animation-delay: 2.5s; }
+.confetti:nth-child(8) { left: 90%; background-color: #ff9800; animation-delay: 0.3s; animation-duration: 5s; }
+
+/* Efecto de caída */
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(50px) rotate(360deg);
+  }
+}
+
+/* Efecto de aparición para el texto */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  
+}
